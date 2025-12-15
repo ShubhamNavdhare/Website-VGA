@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #000);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-shadow: 0 0 30px rgba(127,90,240,.5);
+}
+
+.hero p {
+  opacity: .85;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 10%;
+  text-align: center;
+  position: relative;
+}
+
+.section-divider {
+  height: 120px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(127,90,240,.12),
+    transparent
+  );
+}
+
+/* GLASS */
+.glass {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(14px);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card-link { text-decoration: none; color: inherit; }
+
+.card {
+  padding: 30px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(12px);
+  transition: .35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,.5);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(127,90,240,0.35),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 38px;
+  border-radius: 50px;
+  background: linear-gradient(135deg,#7f5af0,#2cb67d);
+  color: #fff;
+  text-decoration: none;
+  margin-top: 30px;
+  transition: .3s;
+}
+
+.btn:hover { transform: translateY(-6px); }
+
+/* SOCIALS */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-icons a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.08);
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+/* =========================
+   FEEDBACK / IDEAS PAGE
+========================= */
+
+.feedback-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.feedback-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.feedback-section .subtitle {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback-form label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+}
+
+.feedback-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.feedback-form button {
+  align-self: center;
+  margin-top: 10px;
+  padding: 14px 42px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f5af0, #2cb67d);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feedback-form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.required-note {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  text-align: center;
+  margin-top: -5px;
+}
+
+.feedback-back {
+  display: block;
+  margin-top: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #7f5af0;
+  font-size: 0.95rem;
+}
+
+.feedback-back:hover {
+  color: #2cb67d;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 40px 25px;
+  }
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  opacity: .7;
+}
